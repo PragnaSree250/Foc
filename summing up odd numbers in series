@@ -1,0 +1,19 @@
+Inputs:
+#include<stdio.h>
+int main()
+{
+	int i, n;
+	int sum =0;
+	printf ("enter the value of n:");
+	scanf("\n %d",&n);
+    for (i=1;i<=n;i+=2)
+    sum+=i;
+    {
+    	printf("\n sum of even number :%d ",sum);
+    	return 0;
+	}
+}
+Outputs:
+enter the value of n:7
+
+ sum of even number :16
