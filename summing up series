@@ -1,0 +1,15 @@
+Input:
+include<stdio.h>
+int main()
+{
+	int n;
+	int sum =0;
+	printf ("enter the value of n=");
+	scanf("%d",&n);
+	sum=(n*(n+1))/2;
+	printf("sum of the series :%d\n",sum);
+	return 0;
+}
+Output:
+enter the value of n=6
+sum of the series :21
