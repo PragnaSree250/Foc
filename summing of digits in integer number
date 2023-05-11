@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+   int n, reverse = 0, remainder;
+
+   printf("Enter an integer number: ");
+   scanf("%d", &n);
+
+   while(n != 0) {
+      remainder = n % 10;
+      reverse = reverse * 10 + remainder;
+      n = n / 10;
+   }
+
+   printf("The reverse of the number is: %d", reverse);
+
+   return 0;
+}
+OUTPUTS:
+Enter an integer number: 9863589
+The reverse of the number is: 9853689
