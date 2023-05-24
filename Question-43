@@ -1,0 +1,89 @@
+#include <stdio.h>
+
+#define NUM_HOURS 24
+#define MIN_EMPLOYEES 3
+#define EMPLOYEES_PER_CUSTOMER 1 / 20
+
+// Function to calculate and print the needed number of employees per hour
+void calculateEmployeesNeeded(int customers[]) {
+    int employees[NUM_HOURS];
+
+    for (int hour = 0; hour < NUM_HOURS; hour++) {
+        int totalCustomers = customers[hour];
+        int neededEmployees = MIN_EMPLOYEES + (totalCustomers / 20);
+        employees[hour] = neededEmployees;
+    }
+
+    printf("Employees Needed per Hour:\n");
+    for (int hour = 0; hour < NUM_HOURS; hour++) {
+        printf("Hour %d: %d employees\n", hour, employees[hour]);
+    }
+}
+
+int main() {
+    int customers[NUM_HOURS];
+
+    printf("Enter the number of customers each hour for 14 days:\n");
+    for (int hour = 0; hour < NUM_HOURS; hour++) {
+        printf("Hour %d: ", hour);
+        scanf("%d", &customers[hour]);
+    }
+
+    calculateEmployeesNeeded(customers);
+
+    return 0;
+}
+OUTPUT:
+Enter the number of customers each hour for 14 days:
+Hour 0: 6
+Hour 1: 37
+Hour 2: 49
+Hour 3: 20
+Hour 4: 54
+Hour 5: 57
+Hour 6:
+45
+Hour 7: 35
+Hour 8: 27
+Hour 9: 31
+Hour 10: 24
+Hour 11: 10
+Hour 12: 23
+Hour 13: 24
+Hour 14: 30
+Hour 15: 31
+Hour 16: 35
+Hour 17: 35
+Hour 18: 12
+Hour 19: 14
+Hour 20: 14
+Hour 21: 24
+Hour 22: 26
+Hour 23: 12
+Employees Needed per Hour:
+Hour 0: 3 employees
+Hour 1: 4 employees
+Hour 2: 5 employees
+Hour 3: 4 employees
+Hour 4: 5 employees
+Hour 5: 5 employees
+Hour 6: 5 employees
+Hour 7: 4 employees
+Hour 8: 4 employees
+Hour 9: 4 employees
+Hour 10: 4 employees
+Hour 11: 3 employees
+Hour 12: 4 employees
+Hour 13: 4 employees
+Hour 14: 4 employees
+Hour 15: 4 employees
+Hour 16: 4 employees
+Hour 17: 4 employees
+Hour 18: 3 employees
+Hour 19: 3 employees
+Hour 20: 3 employees
+Hour 21: 4 employees
+Hour 22: 4 employees
+Hour 23: 3 employees
+
+
