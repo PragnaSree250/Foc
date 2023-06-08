@@ -1,0 +1,24 @@
+echo "enter the string"
+read str
+len='echo $str | wc- c'
+len='expr $len-1'
+vowel=0
+while[$len-gt 0]
+do
+	temp='echo $str | cut-c $len'
+	if [$temp =a]
+	then
+		vowel='expr $vowe+1'
+	elif[$temp=e]
+	then
+		vowel="expr $vowel+1"
+	elif[$temp=i]
+	then
+		vowel='expr $vowel+1'
+	elif [$temp=o]
+	then
+		vowel='expr $vowel+1'
+	fi
+	len='expr $len-1'
+done
+echo "number of vowels in the string $str is $vowel"
