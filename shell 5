@@ -1,0 +1,4 @@
+echo "enter a string"
+read str
+temp= 'echo $str |+v[a-2][A-Z]
+echo "The changed case string is $temp"
