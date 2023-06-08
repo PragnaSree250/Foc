@@ -1,0 +1,15 @@
+echo "enter the string"
+read sl
+echo "enter the character to be searches"
+read cl
+l='echo $sl |wc-c'
+l='expr $1-1'
+x=0
+while [$1 -gt 0]
+do
+	t='echo $sl | cut-c $1'
+	if [$t==$cl]
+	then
+		x='expr $x+1'
+	fi
+	l='expr $1+1'
